@@ -16,10 +16,10 @@ class Solution {
         // Code here
         while(i!=nullptr){
             if(i->data == key){
-                return 1;
+                return true;
             }
             i=i->next;
         }
-        return 0;
+        return false;
     }
 };
