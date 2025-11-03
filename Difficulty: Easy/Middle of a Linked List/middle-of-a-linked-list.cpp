@@ -9,30 +9,28 @@ class Node {
     }
 
 }; */
+// 35  24  20 17 11 8 4 
 
 class Solution {
   public:
-    int getMiddle(Node* head) {
+    int getMiddle(Node* i) {
         // code here
+         
+        Node *j = i;
         
         int cnt =0;
-        
-        Node* i = head;
-        
-        while(i!=nullptr){
-            i=i->next;
+        while(j!=nullptr){
+            j=j->next;
             cnt++;
         }
         
-        
         int mid = cnt/2;
-        
-        for(int j=0;j<mid;j++){
-            head = head->next;
+        for(int k=0;k<mid;k++){
+            i = i->next;
         }
+        return i->data;
         
-        return head->data;
-        
+       
         
     }
 };
