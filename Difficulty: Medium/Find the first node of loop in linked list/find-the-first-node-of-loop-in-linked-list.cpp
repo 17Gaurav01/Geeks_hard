@@ -15,26 +15,26 @@ class Solution {
   public:
     int cycleStart(Node* head) {
         // code here
-        Node *i=head;
-        Node *j=head;
-        
-        int f=0;
+        Node *i = head ; 
+        Node *j = head;
+        int flag = 0;
         while(j and j->next){
-            i=i->next;
-            j=j->next->next;
+            i = i->next;
+            j = j->next->next;
             if(i==j){
-                f=1;
+                flag = 1;
                 break;
             }
         }
-        if(f==0) return -1;
-        j=head;
-        
-        while(i!=j){
-            i=i->next;
-            j=j->next;
+        if(flag == 0) return -1;
+        j = head;
+        while(i != j){
+            i = i->next;
+            j = j->next;
         }
         return i->data;
+        
+        
         
     }
 };
